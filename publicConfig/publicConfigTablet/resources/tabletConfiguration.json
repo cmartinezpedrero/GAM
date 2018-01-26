@@ -1,0 +1,83 @@
+{
+	"publicConfig": {
+        "versions":{
+            "5.0.0":{
+                "woodyParams": {
+                    "releaseHTMLBranch": "tags/5.0.0"
+                }
+            },
+            "4.0.0":{
+                "woodyParams": {
+                    "releaseHTMLBranch": "tags/4.0.0"
+                },
+                "initialMessage": {
+                    "message": {
+                        "spa": "Por favor, actualízate a la nueva versión de la aplicación. Por motivos de seguridad es aconsejable utilizar siempre la versión más reciente.",
+                        "eng": "Please upgrade to the new app version. For security reasons is recommended always use the most recent version.",
+                        "cat": "Si us plau, actualitza't a la nova versió de l'aplicació. Per motius de seguritat es recomanable utilitzar sempre la darrera versió.",
+                        "glg": "Por favor, actualízate á nova versión da aplicación. Por motivos de seguridade é aconsellable utilizar sempre a versión máis recente.",
+                        "eus": "Eguneratu aplikazioa azken bertsiora. Segurtasun arrazoiak direla medio, gomendagarria da beti azken bertsioa erabiltzea."
+                    },
+                    "title": {
+                            "spa": "Hay una nueva BBVA Móvil",
+                            "eng": "There is a new BBVA Móvil",
+                            "cat": "Hi ha una nova BBVA Móvil",
+                            "glg": "Hai unha nova BBVA Móbil",
+                            "eus": "BBVA mugikor berria dago"
+                    },
+                    "actions": {
+                        "description": "Continuar",
+                        "url": "itms-apps://itunes.apple.com/es/app/bbva-espa%C3%B1a-para-ipad/id452988069?mt=8"
+                    },
+                    "typeInitialMessage": "OptionalUpdate"
+                }
+            }
+        },
+		"default":{
+			"initialMessage": {
+				"message": {
+					"spa": "Por favor, actualízate a la nueva versión de la aplicación. Por motivos de seguridad es aconsejable utilizar siempre la versión más reciente.",
+					"eng": "Please upgrade to the new app version. For security reasons is recommended always use the most recent version.",
+					"cat": "Si us plau, actualitza't a la nova versió de l'aplicació. Per motius de seguritat es recomanable utilitzar sempre la darrera versió.",
+					"glg": "Por favor, actualízate á nova versión da aplicación. Por motivos de seguridade é aconsellable utilizar sempre a versión máis recente.",
+					"eus": "Eguneratu aplikazioa azken bertsiora. Segurtasun arrazoiak direla medio, gomendagarria da beti azken bertsioa erabiltzea."
+				},
+				"title": {
+						"spa": "Hay una nueva BBVA Móvil",
+						"eng": "There is a new BBVA Móvil",
+						"cat": "Hi ha una nova BBVA Móvil",
+						"glg": "Hai unha nova BBVA Móbil",
+						"eus": "BBVA mugikor berria dago"
+				},
+				"actions": {
+					"description": "Continuar",
+					"url": "itms-apps://itunes.apple.com/es/app/bbva-espa%C3%B1a-para-ipad/id452988069?mt=8"
+				},
+				"typeInitialMessage": "MandatoryUpdate"
+			}
+        },
+        "mandatory":{
+            "initialMessage": {
+                "message": {
+                    "spa": "Estamos trabajando para mejorar nuestros sistemas",
+                    "eng": "We are working to improve our systems",
+                    "cat": "Estem treballant per millorar",
+                    "glg": "Estamos traballando para mellorar os nosos sistemas",
+                    "eus": "Gure sistemak hobetzeko lanean ari gara"
+                },
+                "title": {
+                    "spa": "Atención",
+                    "eng": "Attention",
+                    "cat": "Atenció",
+                    "glg": "Atención",
+                    "eus": "Kontuz!"
+                },
+                "actions": {
+                    "description": "Continuar",
+                    "url": ""
+                },
+                "typeInitialMessage": "AdvisorMessage"
+            }
+        }
+	}
+}
