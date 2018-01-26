@@ -34,7 +34,7 @@ function getConfig(tabletJson, lang) {
 
 function calculateConfig(tabletJson, appVersion, lang) {
 	const configVersion = getConfig(tabletJson.publicConfig.versions[appVersion], lang);
-	const configDefault = getConfig(tabletJson.publicConfig.default, lang);
+	const configDefault = getConfig(tabletJson.publicConfig.versions.default, lang);
 	const configMandatory = getConfig(tabletJson.publicConfig.mandatory, lang);
 	const config = merge(configDefault, configVersion);
 	const publicConfig = merge(config, configMandatory);
