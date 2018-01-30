@@ -5,7 +5,7 @@ const BBVA_USER_AGENT_POSITION = 8;
 
 
 function recoverFile() {
-	const file = 'resources/tabletConfiguration.json';
+	const file = 'resources/tabletConfigurationMock.json';
 
 	return fs.readJsonSync(file, { throws: false });
 }

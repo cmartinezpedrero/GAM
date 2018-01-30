@@ -10,22 +10,6 @@ const optionalUpdateTitle_eus = 'Kontuz!';
 
 
 describe('Test de pruebas de configuracion publica para Tablet: ', () => {
-	describe('TEST salida servicio: ** calculatePublicConfig.calculatePublicConfig **', () => {
-		it('v4.0.0 || lang = spa ', () => {
-			const body = {
-				lang: 'spa',
-				bbvaUserAgent: BBVA_USER_AGENT_400
-			};
-
-			const result = calculatePublicConfig.calculatePublicConfig(body);
-			console.log('***************** ENTRADA SERVICIO **************');
-			console.log('BBVA-User-Agent: ;Android;samsung;SM-G920F;1440x2560;Android;6.0.1;BMES;4.0.0;xxxhdpi');
-			console.log('lang: spa');
-			console.log('***************** SALIDA SERVICIO **************');
-			console.log(result);
-			console.log('*******************************');
-		});
-	});
 	describe(`Check BBVA-UserAgent: ${ BBVA_USER_AGENT_400}`, () => {
 		it('v4.0.0 || lang = spa ', () => {
 			const body = {
@@ -169,5 +153,46 @@ describe('Test de pruebas de configuracion publica para Tablet: ', () => {
 
 			expect(result).to.be.eql(publicConfig);
 		});
+	});
+});
+
+describe('TEST PRUEBAS salida: ** calculatePublicConfig.calculatePublicConfig **', () => {
+	it('Test que muestra la salida del servicio calculatePublicConfig.calculatePublicConfig ', () => {
+		const body = {
+			lang: 'spa',
+			bbvaUserAgent: BBVA_USER_AGENT_400
+		};
+
+		const result = calculatePublicConfig.calculatePublicConfig(body);
+		console.log('***************** ENTRADA SERVICIO **************');
+		console.log('BBVA-User-Agent: ;Android;samsung;SM-G920F;1440x2560;Android;6.0.1;BMES;4.0.0;xxxhdpi');
+		console.log('lang: spa');
+		console.log('***************** SALIDA SERVICIO **************');
+		console.log(result);
+		console.log('*******************************');
+	});
+
+	it('Test tipos mensaje string en initialMessage: message, title y typeInitialMessage', () => {
+		const body = {
+			lang: 'spa',
+			bbvaUserAgent: BBVA_USER_AGENT_350
+		};
+
+		const publicConfig = {
+			initialMessage: {
+				message: optionalUpdateText_spa,
+				title: optionalUpdateTitle_spa,
+				actions: {
+					description: 'Continuar',
+					url: ''
+				},
+				typeInitialMessage: 'AdvisorMessage'
+			}
+		};
+		const result = calculatePublicConfig.calculatePublicConfig(body);
+
+		expect("string").to.be.eql(typeof result.initialMessage.message);
+		expect("string").to.be.eql(typeof result.initialMessage.title);
+		expect("string").to.be.eql(typeof result.initialMessage.typeInitialMessage);
 	});
 });
